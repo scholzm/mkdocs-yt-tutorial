@@ -2,7 +2,7 @@
 
 ## Comparison of Services
 
->>> This is the first paragraph of the document.
+> This is the first paragraph of the document.
 
 | Azure Service  | Second Header | Third Header |
 | ------------   | ------------- | ------------ |
