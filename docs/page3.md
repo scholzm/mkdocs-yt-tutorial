@@ -1,5 +1,19 @@
-# Page 3
+Title:   My Document
+Summary: A brief description of my document.
+Authors: Mike Scholz
+         Ben Affleck
+Date:    September 01, 2023
+blank-value:
+some_url: https://example.com
 
-## Another heading
+This is the first paragraph of the document.
 
-Some more example text
+| First Header | Second Header | Third Header |
+| ------------ | ------------- | ------------ |
+| Content Cell | Content Cell  | Content Cell |
+| Content Cell | Content Cell  | Content Cell |
+
+First Header | Second Header | Third Header
+:----------- |:-------------:| -----------:
+Left         | Center        | Right
+Left         | Center        | Right
