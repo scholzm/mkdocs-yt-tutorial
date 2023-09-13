@@ -23,7 +23,7 @@
 
 ### [2] Azure Functions
 
-Like the App Service, Azure Functions are a well-established Azure offering, enabling running lightweight event-driven applications. It is possible to deploy Functions inside a container, using the Azure-Functions base-image. A container based on this image can be hosted on other container platforms (AKS for example), but can also be hosted inside an Azure Functions runtime, in which case it behaves like any other Function.
+Like the App Service, [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/) are a well-established Azure offering, enabling running lightweight event-driven applications. It is possible to deploy Functions inside a container, using the Azure-Functions base-image. A container based on this image can be hosted on other container platforms (AKS for example), but can also be hosted inside an Azure Functions runtime, in which case it behaves like any other Function.
 
 **Complexity & Ease of use:** Deployment is as easy as deploying an App Service. Running a Function in a container requires usage of the Azure-Functions base-image, which can complicate the creation of your custom image. As with an App Service, no further knowledge of container management is required.
 
@@ -34,7 +34,7 @@ When to use: When developing Azure Functions that will probably be hosted on con
 
 ### [3] Azure Container instances (ACI)
 
-The Azure Container Instance (ACI) is arguably the simplest way of getting a single container, or a container group (pod) up and running on Azure. Where the App Service and Functions runtime are focused on certain types of workloads, the Container Instance can be used for all kinds of different applications. The ACI is a lightweight container solution, allowing fast deployments and easy cleanup.
+The [Azure Container Instance (ACI)](https://azure.microsoft.com/nl-nl/services/container-instances/) is arguably the simplest way of getting a single container, or a container group (pod) up and running on Azure. Where the App Service and Functions runtime are focused on certain types of workloads, the Container Instance can be used for all kinds of different applications. The ACI is a lightweight container solution, allowing fast deployments and easy cleanup.
 
 **Complexity & Ease of use:** Deployment to ACI is relatively simple. Using multiple containers in the same group requires some knowledge of ARM templates, and of container-container interactions.
 **Capability:** ACI provides a very basic container runtime. This makes it very fast and cost-effective, but comes at the cost of absence of features like scaling and load-balancing.
@@ -45,7 +45,7 @@ The Azure Container Instance (ACI) is arguably the simplest way of getting a sin
 
 ### [4] Azure Kubernetes Service (AKS)
 
-With Kubernetes having become the default container management tooling in recent years, it is no surprise that Microsoft has added a Kubernetes-based offering to their portfolio of Container runtimes on Azure. The Azure Kubernetes Service offers the complete Kubernetes experience, and adds easy integration with Azure Files and Disks, Log Analytics and Azure Active Directory. AKS provides a managed solution; you do not have to think about the underlying machines that your cluster is running on. However, the responsibility for administering your cluster lies with you in its entirety. Direct interaction with the Kubernetes API is both possible and required for cluster administration.
+With Kubernetes having become the default container management tooling in recent years, it is no surprise that Microsoft has added a Kubernetes-based offering to their portfolio of Container runtimes on Azure. The [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/) offers the complete Kubernetes experience, and adds easy integration with Azure Files and Disks, Log Analytics and Azure Active Directory. AKS provides a managed solution; you do not have to think about the underlying machines that your cluster is running on. However, the responsibility for administering your cluster lies with you in its entirety. Direct interaction with the Kubernetes API is both possible and required for cluster administration.
 
 **Complexity & Ease of use:** Administering Kubernetes requires specialized knowledge, and many actions can only be performed via the command line interface. AKS provides the most freedom in configuration and usage, but this results in possibly the most intensive administrative workload of all the alternatives discussed in this article.
 
@@ -57,7 +57,7 @@ With Kubernetes having become the default container management tooling in recent
 
 ### [5] Azure RedHat OpenShift (ARO)
 
-RedHat OpenShift is easily the most feature-rich and extensive container platform available at this time. It is a complete platform offering container solutions, integration, security, and monitoring. OpenShift is available on multiple platforms, with the Azure version being named Azure RedHat OpenShift or ARO.
+RedHat OpenShift is easily the most feature-rich and extensive container platform available at this time. It is a complete platform offering container solutions, integration, security, and monitoring. OpenShift is available on multiple platforms, with the Azure version being named [Azure RedHat OpenShift or ARO](https://azure.microsoft.com/nl-nl/services/openshift/).
 
 **Complexity & Ease of use:** With OpenShift, RedHat has aimed to create a more user-friendly experience when compared to working with Kubernetes.
 
@@ -69,7 +69,7 @@ RedHat OpenShift is easily the most feature-rich and extensive container platfor
 
 ### [6] Azure Container Apps (ACA)
 
-Azure Container Apps is the newest container runtime offered by Microsoft. It provides an environment using Kubernetes, enhanced with technologies like Dapr and KEDA, but does not provide direct access to the Kubernetes API. Azure Container Apps is targeted specifically towards microservices-based applications, but can also be used for general-purpose applications. ACA can be seen as a PaaS layer on top of Kubernetes.
+[Azure Container Apps](https://azure.microsoft.com/en-us/services/container-apps/) is the newest container runtime offered by Microsoft. It provides an environment using Kubernetes, enhanced with technologies like [Dapr](https://dapr.io/) and [KEDA](https://keda.sh/), but does not provide direct access to the Kubernetes API. Azure Container Apps is targeted specifically towards microservices-based applications, but can also be used for general-purpose applications. ACA can be seen as a PaaS layer on top of Kubernetes.
 
 **Complexity & Ease of use:** ACA is a Microsoft-created package of Kubernetes with a selection of often-used additions. Microsoft takes care of the integration and correct operation of these additions, at the cost of some of the more advanced Kubernetes features and access to the Kubernetes API. This reduction of available features also reduces your administrative workload compared to AKS.
 
@@ -81,4 +81,4 @@ Azure Container Apps is the newest container runtime offered by Microsoft. It pr
 
 ## Recap
 
-> There are many ways to run containerized applications on Azure. Choosing the right environment for your containerized application can have a big impact on administrative burden, cost, and performance. It is therefore important to take a good look at the type of applications you are considering to containerize, and compare the pros and cons of these environments. With this article, we have tried to provide you with the basis to make an informed decision on selecting the Azure container environment that is right for you.
+> There are many ways to run containerized applications on [Azure](https://azure.microsoft.com/nl-nl/). Choosing the right environment for your containerized application can have a big impact on administrative burden, cost, and performance. It is therefore important to take a good look at the type of applications you are considering to containerize, and compare the pros and cons of these environments. With this article, we have tried to provide you with the basis to make an informed decision on selecting the Azure container environment that is right for you.
