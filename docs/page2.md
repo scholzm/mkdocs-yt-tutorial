@@ -1,5 +1,10 @@
-# Page 2
+# Containerization on Azure
 
-## Another heading
+## Comparison of Services
 
-Some more example text
+This is the first paragraph of the document.
+
+| Azure Service  | Second Header | Third Header |
+| ------------   | ------------- | ------------ |
+| Az App Service | Content Cell  | Content Cell |
+| Az Function    | Content Cell  | Content Cell |
