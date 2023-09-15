@@ -1,4 +1,4 @@
-Title:   My Document
+Title:   Linux 1
 Summary: A brief description of my document.
 Authors: Mike Scholz
          Ben Affleck
