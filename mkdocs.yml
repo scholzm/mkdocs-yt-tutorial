@@ -1,5 +1,16 @@
 site_name: My Docs
 site_url: https://james-willett.github.io/mkdocs-material-youtube-tutorial/
+
+nav:
+  - Home: 'index.md'
+  - Azure:
+    - Azure: 'az-container.md'
+  - Linux: 
+    - Basics: 'linux-1.md'
+    - Basics: 'linux-2.md'
+    - Basics: 'linux-3.md'
+    - Basics: 'linux-4.md'
+
 theme:
   name: material  # readthedocs
   features:
