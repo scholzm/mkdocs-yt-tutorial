@@ -1,6 +1,7 @@
 # Containerization on Azure
 
-## [Comparison of Services by Devoteam M Cloud](https://mcloud.devoteam.com/expert-view/containerization-on-azure-a-comparison-of-services/)
+## Comparison
+[Comparison of Services by Devoteam M Cloud](https://mcloud.devoteam.com/expert-view/containerization-on-azure-a-comparison-of-services/)
 
 > This is the first paragraph of the document.
 
@@ -9,7 +10,7 @@
 | Az App Service | Content Cell  | Content Cell |
 | Az Function    | Content Cell  | Content Cell |
 
-### [1] Azure App Service
+### [1] Az App Service
 
 [Azure App Service](https://azure.microsoft.com/nl-nl/services/app-service/) is one of the oldest services available on Azure. It offers the possibility of running a single application in a fully-managed environment. Microsoft has added the option of deploying a single Docker container to an App Service, making it one of the simplest options available when you want to run a single containerized application. Scaling options are available via the App Service Plan, which can scale out to multiple instances of the same App Service. Container images can be retrieved from ACR (Azure Container Registry), Docker Hub, or a private repository.
 
@@ -21,7 +22,7 @@
 
 **When to use:** Long-running applications that require single containers (webapps, API’’s). Continuous workloads to optimally use monthly pricing. App Service is also a good choice for those just starting out with their first containerized application.
 
-### [2] Azure Functions
+### [2] Az Functions
 
 Like the App Service, [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/) are a well-established Azure offering, enabling running lightweight event-driven applications. It is possible to deploy Functions inside a container, using the Azure-Functions base-image. A container based on this image can be hosted on other container platforms (AKS for example), but can also be hosted inside an Azure Functions runtime, in which case it behaves like any other Function.
 
@@ -32,7 +33,8 @@ Like the App Service, [Azure Functions](https://docs.microsoft.com/en-us/azure/a
 **Cost:** Running a Functions container inside a Function runtime requires the use of an App Service Plan, making the costs comparable to an Azure App Service. It is not possible to use the usage-based Consumption Plan when using a container for a Function.
 When to use: When developing Azure Functions that will probably be hosted on containers in other environments at a later time. As a container-based Functions runtime cannot be combined with the Consumption plan (pay-per-use), a key advantage of the Functions runtime is lost.
 
-### [3] Azure Container instances (ACI)
+### [3] ACI
+> Azure Container Instances
 
 The [Azure Container Instance (ACI)](https://azure.microsoft.com/nl-nl/services/container-instances/) is arguably the simplest way of getting a single container, or a container group (pod) up and running on Azure. Where the App Service and Functions runtime are focused on certain types of workloads, the Container Instance can be used for all kinds of different applications. The ACI is a lightweight container solution, allowing fast deployments and easy cleanup.
 
@@ -43,7 +45,8 @@ The [Azure Container Instance (ACI)](https://azure.microsoft.com/nl-nl/services/
 
 **When to use:** Processing of batch jobs, build jobs, automation tasks; short-duration, simple applications.
 
-### [4] Azure Kubernetes Service (AKS)
+### [4] AKS
+> Azure Kubernetes Service
 
 With Kubernetes having become the default container management tooling in recent years, it is no surprise that Microsoft has added a Kubernetes-based offering to their portfolio of Container runtimes on Azure. The [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/) offers the complete Kubernetes experience, and adds easy integration with Azure Files and Disks, Log Analytics and Azure Active Directory. AKS provides a managed solution; you do not have to think about the underlying machines that your cluster is running on. However, the responsibility for administering your cluster lies with you in its entirety. Direct interaction with the Kubernetes API is both possible and required for cluster administration.
 
@@ -55,7 +58,8 @@ With Kubernetes having become the default container management tooling in recent
 
 **When to use:** Complex landscapes requiring container orchestration, scaling, advanced configuration, or running specialized workloads.
 
-### [5] Azure RedHat OpenShift (ARO)
+### [5] ARO
+> Azure RedHat OpenShift - ARO
 
 RedHat OpenShift is easily the most feature-rich and extensive container platform available at this time. It is a complete platform offering container solutions, integration, security, and monitoring. OpenShift is available on multiple platforms, with the Azure version being named [Azure RedHat OpenShift or ARO](https://azure.microsoft.com/nl-nl/services/openshift/).
 
@@ -67,7 +71,8 @@ RedHat OpenShift is easily the most feature-rich and extensive container platfor
 
 **When to use:** OpenShift provides a suite of various services and capabilities on top of Kubernetes ranging from security options to ci/cd services, while abstracting away the advanced configuration work. This makes OpenShift the best choice for large enterprise environments. OpenShift is also especially suited for cloud migrations and complex modernization journeys.
 
-### [6] Azure Container Apps (ACA)
+### [6] ACA
+> ACA - Azure Container Apps  
 
 [Azure Container Apps](https://azure.microsoft.com/en-us/services/container-apps/) is the newest container runtime offered by Microsoft. It provides an environment using Kubernetes, enhanced with technologies like [Dapr](https://dapr.io/) and [KEDA](https://keda.sh/), but does not provide direct access to the Kubernetes API. Azure Container Apps is targeted specifically towards microservices-based applications, but can also be used for general-purpose applications. ACA can be seen as a PaaS layer on top of Kubernetes.
 
